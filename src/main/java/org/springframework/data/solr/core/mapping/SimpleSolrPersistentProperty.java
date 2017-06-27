@@ -294,4 +294,8 @@ public class SimpleSolrPersistentProperty extends AnnotationBasedPersistentPrope
 		return findAnnotation(Dynamic.class).isPresent();
 	}
 
+	@Override
+	public boolean isChildProperty() {
+		return getFieldAnnotation().map(it -> it.child()).orElse(false);
+	}
 }

@@ -123,6 +123,13 @@ public interface SolrPersistentProperty extends PersistentProperty<SolrPersisten
 	 */
 	boolean isDynamicProperty();
 
+	/**
+	 *
+	 * @return
+	 * @since 3.0
+	 */
+	boolean isChildProperty();
+
 	enum PropertyToFieldNameConverter implements Converter<SolrPersistentProperty, String> {
 
 		INSTANCE;
